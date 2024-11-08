@@ -233,3 +233,7 @@ default_border pixel 2
 
 exec mako
 exec firefox
+exec dunst
+exec swaylock
+
+bindsym $mod+Shift+s exec swaylock & systemctl suspend
