@@ -25,7 +25,7 @@ set $menu wofi --show drun
 # Default wallpaper (more resolutions are available in /usr/share/backgrounds/sway/)
 Output eDP-1 
 
-output * bg /home/vnvvr1/Downloads/bulbs.jpg fill
+output * bg /home/vnvvr1/Downloads/sq897dtfmn891.jpg fill
 #
 # Example configuration:
 #
@@ -229,11 +229,26 @@ bindsym --locked XF86AudioMicMute exec pactl set-source-mute @DEFAULT_SOURCE@ to
 gaps inner 10
 gaps outer 5
 #smart_gaps on
-default_border pixel 2
+default_border pixel 3
+
+# Цвета рамок
+	client.focused			#d79921 #d79921 #d79921 #d79921
+	client.focused_inactive		#272a34 #272a34 #272a34 #272a34
+	client.unfocused		#272a34 #272a34 #272a34 #272a34
+	client.urgent			#272a34 #272a34 #272a34 #272a34
+	client.placeholder		#272a34 #272a34 #272a34 #272a34
+
+
 
 exec mako
 exec firefox
 exec dunst
-exec swaylock
+#exec swaylock
 
-bindsym $mod+Shift+s exec swaylock & systemctl suspend
+#bindsym $mod+Shift+s exec swaylock & systemctl suspend
+#bindsym $mod+Shift+o systemctl shutdown now
+
+# Выключение/Перезагрузка	
+	#bindsym --to-code $mod+Ctrl+r exec reboot
+	bindsym --to-code $mod+Ctrl+p exec poweroff
+
