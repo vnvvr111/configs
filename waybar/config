@@ -6,7 +6,7 @@
     // Choose the order of the modules
     "modules-left": ["sway/workspaces", "sway/mode", "custom/media"],
     "modules-center": ["sway/window"],
-    "modules-right": ["pulseaudio", "network", "backlight", "sway/language", "battery", "battery#bat2", "clock", "tray"],
+    "modules-right": ["pulseaudio", "network", "bluetooth", "backlight", "sway/language", "battery", "battery#bat2", "clock", "tray"],
     // Modules configuration
     // "sway/workspaces": {
     //     "disable-scroll": true,
@@ -111,14 +111,14 @@
         "format-ethernet": "{ifname}: {ipaddr}/{cidr} ",
         "format-linked": "{ifname} (No IP) ",
         "format-disconnected": "Disconnected ⚠",
-        "format-alt": "{ifname}: {ipaddr}/{cidr}",
+        // "format-alt": "{ifname}: {ipaddr}/{cidr}",
 	"on-click": "kitty -T float nmtui"
 	    },
 	
     "bluetooth": {
-        "format": "bl",
-        "format-disabled": "bl",
-        "on-click": "swaymsg exec \\$bluetooth",
+        "format": "",
+        "format-disabled": "",
+        "on-click": "kitty -T float bluetui",
         "on-click-right": "rfkill toggle bluetooth",
         "tooltip-format": "{}"
 	},
